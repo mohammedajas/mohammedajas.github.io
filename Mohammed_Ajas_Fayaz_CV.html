@@ -34,7 +34,16 @@
       font-size: 10pt;
       color: var(--muted);
     }
-    .contact a { color: var(--muted); text-decoration: none; }
+    .contact a { color: var(--muted); text-decoration: underline; }
+    .back-link {
+      display: inline-block;
+      margin: 0 0 16px;
+      font-size: 10pt;
+      font-family: system-ui, -apple-system, sans-serif;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
     .headline {
       margin: 0 0 16px;
       font-size: 12pt;
@@ -98,13 +107,17 @@
 </head>
 <body>
 
-  <!-- ========== CV (application pages) ========== -->
+  <!-- ========== MASTER CV (working copy + career appendix) ========== -->
+  <!-- Job applications: use resume.html (clean ATS-ready version linked from portfolio nav). -->
+  <a class="back-link" href="index.html">← Back to portfolio</a>
+  <p class="note" style="margin-bottom:12px;">Master CV (internal). For job applications use <a href="resume.html">resume.html</a>.</p>
   <header>
     <h1>Mohammed Ajas Fayaz</h1>
     <p class="contact">
       Dubai, United Arab Emirates<br />
       +971 50 761 2748 · <a href="mailto:mohammedajas@hotmail.com">mohammedajas@hotmail.com</a><br />
-      LinkedIn: <span class="placeholder">[PLACEHOLDER]</span> · GitHub / Portfolio: <span class="placeholder">[PLACEHOLDER]</span>
+      LinkedIn: <a href="https://ae.linkedin.com/in/mohammedajas">ae.linkedin.com/in/mohammedajas</a><br />
+      GitHub / Portfolio: <a href="https://mohammedajas.github.io/">mohammedajas.github.io</a> · <a href="https://github.com/mohammedajas">github.com/mohammedajas</a>
     </p>
     <p class="headline">Senior iOS / Mobile Engineer | AI Application Engineer | GenAI</p>
   </header>
@@ -112,7 +125,7 @@
   <section>
     <h2>Professional Summary</h2>
     <p>
-      Senior iOS and Mobile Engineer with 7+ years of experience designing, building, testing, and shipping production mobile applications across the full software development lifecycle. Proven delivery of customer-facing and enterprise-scale apps in Dubai and India, including e-commerce, payments/money transfer, retail, and location-based experiences.
+      Senior iOS and Mobile Engineer with 10+ years of experience designing, building, testing, and shipping production mobile applications across the full software development lifecycle. Proven delivery of customer-facing and enterprise-scale apps in Dubai and India, including e-commerce, payments/money transfer, retail, and location-based experiences.
     </p>
     <p>
       Hands-on expertise in Swift, Cocoa Touch / UIKit, Xcode, App Store releases, REST API integration, and source control. Additional experience with Flutter and React Native for cross-platform delivery, plus collaboration with design, product, QA, and backend teams.
@@ -130,9 +143,7 @@
     <p class="skills-block"><strong>Flutter / Dart:</strong> Flutter, Cross-Platform Mobile Development</p>
     <p class="skills-block"><strong>Architecture &amp; Design:</strong> SDLC (Analysis, Design, Development, Testing, Deployment), Feature Ownership, Secure Coding Practices</p>
     <p class="skills-block"><strong>Backend &amp; APIs:</strong> REST APIs, API Integration, JSON</p>
-    <p class="skills-block"><strong>Databases:</strong> <span class="placeholder">[PLACEHOLDER]</span></p>
     <p class="skills-block"><strong>AI / GenAI (Currently Learning):</strong> LLM APIs, OpenAI APIs, Anthropic Claude, Google Gemini, AWS Bedrock, RAG, Embeddings, Vector Databases, Semantic Search, AI Agents, Function Calling, Tool Use, MCP, AI-Powered Application Development</p>
-    <p class="skills-block"><strong>Cloud &amp; DevOps:</strong> <span class="placeholder">[PLACEHOLDER]</span></p>
     <p class="skills-block"><strong>Testing &amp; CI/CD:</strong> Application Testing, Issue Triage &amp; Support, Production Monitoring (crash-free quality)</p>
     <p class="skills-block"><strong>Development Tools:</strong> Xcode, Git, Bitbucket, Unity (AR / multiplayer projects), Vuforia SDK, Photon SDK, React Native, Xamarin</p>
     <p class="skills-block"><strong>Languages:</strong> English, Tamil, Hindi, Telugu</p>
@@ -144,11 +155,10 @@
     <h3>Senior iOS Developer — GMG, Dubai</h3>
     <p class="meta">August 2023 – Present</p>
     <ul>
-      <li>Own and deliver senior-level iOS development for production mobile applications. <span class="placeholder">[PLACEHOLDER: describe products/apps, domain, and key features owned]</span></li>
-      <li>Build, maintain, and ship iOS features using Swift and Xcode in collaboration with design, product, QA, and backend teams. <span class="placeholder">[PLACEHOLDER: list concrete features and technical ownership]</span></li>
-      <li>Integrate REST APIs, third-party SDKs, and platform capabilities required for production releases. <span class="placeholder">[PLACEHOLDER: name integrations]</span></li>
-      <li>Improve application quality, performance, and stability for customer-facing users. <span class="placeholder">[ADD METRIC]</span></li>
-      <li>Contribute to App Store releases and production support. <span class="placeholder">[PLACEHOLDER: release cadence / incident ownership]</span></li>
+      <li>Senior iOS development for GMG production apps: Sun &amp; Sand Sports, Nike Sports Wear, Under Armour ME, and iDecide GMG.</li>
+      <li>Build, maintain, and ship iOS features using Swift and Xcode in collaboration with design, product, QA, and backend teams.</li>
+      <li>Integrate REST APIs, third-party SDKs, and platform capabilities for e-commerce and enterprise App Store releases.</li>
+      <li>Improve application quality, performance, and stability; contribute to production support and release cycles.</li>
     </ul>
 
     <h3>iOS Developer — Swan, Dubai</h3>
@@ -192,6 +202,42 @@
     <h2>Selected Technical Projects</h2>
 
     <div class="project">
+      <h3>iDecide GMG — Approvals &amp; Decision Workflows</h3>
+      <p><span class="label">Problem:</span> Help teams manage and act on approval requests with clear status, accountability, and role-based access.</p>
+      <p><span class="label">Role:</span> Senior iOS Developer (GMG)</p>
+      <p><span class="label">Technologies:</span> Swift, UIKit, Xcode, App Store</p>
+      <p><span class="label">Key implementation:</span> Production iOS productivity app for centralized approval requests, review/decision actions, status tracking, and role-based access.</p>
+      <p><span class="label">Outcome:</span> Live App Store application. App: https://apps.apple.com/us/app/idecide-gmg/id6757460858</p>
+    </div>
+
+    <div class="project">
+      <h3>Sun &amp; Sand Sports — Shop Online</h3>
+      <p><span class="label">Problem:</span> Deliver a flagship sportswear e-commerce experience for GCC markets (UAE, KSA, Kuwait) across major athletic brands.</p>
+      <p><span class="label">Role:</span> Senior iOS Developer (GMG)</p>
+      <p><span class="label">Technologies:</span> Swift, UIKit, Xcode, REST APIs, App Store</p>
+      <p><span class="label">Key implementation:</span> Production shopping app features for product discovery, filtering, basket/checkout, and location-specific store experiences.</p>
+      <p><span class="label">Outcome:</span> Live App Store application. App: https://apps.apple.com/us/app/sun-sand-sports-shop-online/id1163601891</p>
+    </div>
+
+    <div class="project">
+      <h3>Nike Sports Wear — Sneakers &amp; Apparel</h3>
+      <p><span class="label">Problem:</span> Provide a Middle East Nike sportswear and sneakers shopping experience with product browsing and purchase flows.</p>
+      <p><span class="label">Role:</span> Senior iOS Developer (GMG)</p>
+      <p><span class="label">Technologies:</span> Swift, UIKit, Xcode, App Store</p>
+      <p><span class="label">Key implementation:</span> Production e-commerce iOS features for brand shopping and online purchase journeys.</p>
+      <p><span class="label">Outcome:</span> Live App Store application. App: https://apps.apple.com/us/app/nike-sports-wear-sneakers/id6444790147</p>
+    </div>
+
+    <div class="project">
+      <h3>Under Armour ME — Shop Online</h3>
+      <p><span class="label">Problem:</span> Enable Middle East customers to browse and purchase Under Armour performance apparel and footwear online.</p>
+      <p><span class="label">Role:</span> Senior iOS Developer (GMG)</p>
+      <p><span class="label">Technologies:</span> Swift, UIKit, Xcode, App Store</p>
+      <p><span class="label">Key implementation:</span> Production e-commerce iOS features for brand shopping and online purchase journeys.</p>
+      <p><span class="label">Outcome:</span> Live App Store application. App: https://apps.apple.com/us/app/under-armour-me-shop-online/id1591394964</p>
+    </div>
+
+    <div class="project">
       <h3>Swan — Grocery Delivery &amp; Home Services</h3>
       <p><span class="label">Problem:</span> Deliver a production e-commerce iOS experience for grocery and on-demand home services in the UAE market.</p>
       <p><span class="label">Role:</span> iOS Developer (Swan)</p>
@@ -203,7 +249,7 @@
     <div class="project">
       <h3>Emirates India Int’l Exchange — Money Transfer</h3>
       <p><span class="label">Problem:</span> Enable users to transfer money from the UAE to other countries through a trusted exchange mobile experience.</p>
-      <p><span class="label">Role:</span> iOS Developer <span class="placeholder">[PLACEHOLDER: confirm employer / exact contribution]</span></p>
+      <p><span class="label">Role:</span> iOS Developer</p>
       <p><span class="label">Technologies:</span> Native iOS, App Store</p>
       <p><span class="label">Key implementation:</span> Production iOS application for cross-border money exchange workflows.</p>
       <p><span class="label">Outcome:</span> Live App Store application. App: https://apps.apple.com/us/app/emirates-india-intl-exchange/id1281319984</p>
@@ -230,22 +276,26 @@
     <div class="project">
       <h3>Wathiq Rewards — Loyalty &amp; Promotions</h3>
       <p><span class="label">Problem:</span> Surface nearby store offers, promotions, and loyalty rewards for KMT trading customers.</p>
-      <p><span class="label">Role:</span> iOS Developer <span class="placeholder">[PLACEHOLDER: confirm employer / exact contribution]</span></p>
+      <p><span class="label">Role:</span> iOS Developer</p>
       <p><span class="label">Technologies:</span> Native iOS, App Store</p>
       <p><span class="label">Key implementation:</span> Loyalty and promotions experience for nearby store discovery.</p>
       <p><span class="label">Outcome:</span> Live App Store application. App: https://apps.apple.com/us/app/id1479329805</p>
     </div>
 
     <div class="project">
-      <h3>GMG — Production iOS Applications</h3>
-      <p><span class="label">Problem / Role / Technologies / Implementation / Outcome:</span> <span class="placeholder">[PLACEHOLDER]</span></p>
+      <h3>PDF Analyzer — Personal GenAI / RAG (iOS + API)</h3>
+      <p><span class="label">Problem:</span> Chat with uploaded PDFs using grounded, cited answers — an end-to-end RAG product shape on mobile.</p>
+      <p><span class="label">Role:</span> Personal project (SwiftUI client + FastAPI backend)</p>
+      <p><span class="label">Technologies:</span> SwiftUI, Swift, SSE, FastAPI, PostgreSQL / pgvector, OpenAI / Gemini, RAG</p>
+      <p><span class="label">Key implementation:</span> Auth, document upload/lifecycle, streaming RAG chat with source citations; companion API with embeddings and vector search.</p>
+      <p><span class="label">Outcome:</span> Documented personal GenAI portfolio project (not production employment AI). Code: https://github.com/mohammedajas/PDFAnalyzer · https://github.com/mohammedajas/pdfanalyzer-api</p>
     </div>
   </section>
 
   <section>
     <h2>AI Application Engineering</h2>
-    <p><span class="label">Professional Experience:</span> No production AI systems claimed. AI specialization is under active development alongside senior iOS / mobile delivery.</p>
-    <p><span class="label">Personal Projects:</span> <span class="placeholder">[PLACEHOLDER — add 1–2 documented GenAI apps when available]</span></p>
+    <p><span class="label">Professional Experience:</span> No production AI systems claimed at employers. AI specialization is under active development alongside senior iOS / mobile delivery.</p>
+    <p><span class="label">Personal Projects:</span> PDF Analyzer — SwiftUI iOS client + FastAPI RAG backend (document Q&amp;A with citations, JWT auth, pgvector search, streaming SSE).</p>
     <p><span class="label">Currently Learning:</span></p>
     <ul>
       <li>LLM application development and AI API integration (OpenAI, Anthropic Claude, Google Gemini, AWS Bedrock)</li>
@@ -260,11 +310,6 @@
     <h2>Education</h2>
     <h3>Bachelor of Engineering in Computer Science</h3>
     <p class="meta">Sri Venkateshwara College of Engineering, Chennai · May 2011 – May 2015 · CGPA 7.0</p>
-  </section>
-
-  <section>
-    <h2>Certifications</h2>
-    <p><span class="placeholder">[PLACEHOLDER — none provided; omit this section if none apply]</span></p>
   </section>
 
   <!-- ========== APPENDIX (strategy package; print on separate pages) ========== -->
@@ -284,20 +329,21 @@
 
     <h2>3. LinkedIn About</h2>
     <p>
-      I am a Senior iOS and Mobile Engineer with 7+ years of experience building and shipping production mobile applications. My core strength is native iOS development with Swift, Cocoa Touch / UIKit, and Xcode—delivering customer-facing apps across e-commerce, payments/money transfer, retail, and location-based experiences in Dubai and India.
+      I am a Senior iOS and Mobile Engineer with 10+ years of experience building and shipping production mobile applications. My core strength is native iOS development with Swift, Cocoa Touch / UIKit, and Xcode—delivering customer-facing apps across e-commerce, payments/money transfer, retail, and location-based experiences in Dubai and India.
     </p>
     <p>
-      I have owned feature development through App Store release: REST API integration, third-party SDKs, indoor navigation with Bluetooth beacons, security hardening, UI collaboration with design teams, and production stability. At Swan, I helped maintain 98.5%–99.5% crash-free users over one year. I also bring cross-platform experience with Flutter and React Native, and earlier delivery on Xamarin and Unity/AR where projects required it.
+      At GMG I work on production apps including Sun &amp; Sand Sports, Nike Sports Wear, Under Armour ME, and iDecide GMG. Previously at Swan I helped maintain 98.5%–99.5% crash-free users over one year. I have owned feature development through App Store release: REST API integration, third-party SDKs, indoor navigation with Bluetooth beacons, security hardening, and UI collaboration with design teams. I also bring cross-platform experience with Flutter and React Native, and earlier delivery on Xamarin and Unity/AR where projects required it.
     </p>
     <p>
-      Currently, I am intentionally expanding into AI Application Engineering and GenAI—learning to build real-world AI-powered products using LLM APIs, RAG, embeddings, vector search, AI agents, function calling, tool use, and MCP. My goal is not machine learning research; it is to combine strong mobile engineering with modern AI capabilities so I can integrate intelligent features into mobile, backend, and cloud applications.
+      Currently, I am intentionally expanding into AI Application Engineering and GenAI—building real-world AI-powered products using LLM APIs, RAG, embeddings, vector search, AI agents, function calling, tool use, and MCP. Personal project: PDF Analyzer (SwiftUI + FastAPI RAG). My goal is not machine learning research; it is to combine strong mobile engineering with modern AI capabilities.
     </p>
     <p>
       Open to Senior iOS / Mobile Engineer roles now, and to AI Application Engineer / Mobile + AI opportunities as my GenAI portfolio grows.
     </p>
     <p>
       Location: Dubai, UAE · Open to UAE, Middle East, and global remote opportunities.<br />
-      Email: mohammedajas@hotmail.com · Phone: +971 50 761 2748
+      Email: mohammedajas@hotmail.com · Phone: +971 50 761 2748<br />
+      Portfolio: https://mohammedajas.github.io/ · LinkedIn: https://ae.linkedin.com/in/mohammedajas · GitHub: https://github.com/mohammedajas
     </p>
 
     <h2>4. Top 20 ATS Keywords (Senior iOS / Mobile + AI Application)</h2>
@@ -323,8 +369,8 @@
       <li>AI Agents / Function Calling / Tool Use</li>
       <li>Embeddings / Vector Database / Semantic Search</li>
     </ol>
-    <p><strong>Present in this CV:</strong> Senior iOS, Mobile, Swift, Cocoa Touch/UIKit, Xcode, App Store, REST API, third-party SDK, Flutter, production mobile apps, GenAI learning keywords (LLM, RAG, agents, embeddings, vector DB, MCP, tool/function calling).</p>
-    <p><strong>Missing or weak (do not invent on CV until true):</strong> SwiftUI, APNs/Push Notifications as confirmed delivery, CI/CD pipelines, unit/UI test frameworks, documented performance optimization metrics beyond crash-free rate, production AI deployment, vector DB project proof, public GenAI GitHub portfolio.</p>
+    <p><strong>Present in this CV:</strong> Senior iOS, Mobile, Swift, Cocoa Touch/UIKit, Xcode, App Store, REST API, third-party SDK, Flutter, production mobile apps (GMG brand + Swan), GenAI learning keywords, personal RAG/SwiftUI project (PDF Analyzer), LinkedIn/GitHub/portfolio URLs.</p>
+    <p><strong>Missing or weak (do not invent on CV until true):</strong> APNs/Push Notifications as confirmed delivery, CI/CD pipelines, unit/UI test frameworks, documented performance optimization metrics beyond crash-free rate, production AI deployment at employers.</p>
 
     <h2>5. Best Job Titles to Apply for Now</h2>
     <ol>
@@ -347,7 +393,7 @@
     <h2>7. Primary Application Strategy (Recommendation)</h2>
     <p>
       <strong>Apply primarily as Senior iOS Engineer / Senior Mobile Engineer / Senior iOS Developer today.</strong>
-      Your confirmed production track record and current title (Senior iOS Developer at GMG) support this path. Use “AI Application Engineer | GenAI” as a secondary headline signal—not as the primary claim—until you have 1–2 documented GenAI projects (personal is acceptable if clearly labeled).
+      Your confirmed production track record and current title (Senior iOS Developer at GMG) support this path. Use “AI Application Engineer | GenAI” as a secondary headline signal—not as the primary claim—while continuing to grow documented GenAI projects (PDF Analyzer is a start; add a second when ready).
     </p>
     <p>
       Do <strong>not</strong> lead with Machine Learning Engineer, Data Scientist, or AI Research titles.
@@ -355,47 +401,42 @@
 
     <h2>8. Biggest Career Gaps vs AI Application Engineer</h2>
     <ol>
-      <li>No documented personal or professional GenAI projects on the CV yet.</li>
-      <li>No production AI feature ownership claimed (correctly omitted).</li>
-      <li>Incomplete current-role narrative for GMG (apps, stack, impact still placeholders).</li>
-      <li>Missing LinkedIn / GitHub / portfolio URLs for recruiter verification.</li>
-      <li>Limited evidenced modern iOS adjacent keywords (SwiftUI, CI/CD, automated testing) until confirmed.</li>
-      <li>No public demo of RAG, agents, or LLM API integration end-to-end.</li>
+      <li>No production AI feature ownership claimed at employers (correctly omitted).</li>
+      <li>Personal GenAI project exists (PDF Analyzer) but may still need a public demo / polished case study.</li>
+      <li>Limited evidenced modern iOS adjacent keywords (CI/CD, automated testing) until confirmed.</li>
+      <li>Employer attribution for Emirates India Int’l Exchange and Wathiq Rewards still light on technical bullets.</li>
     </ol>
 
     <h2>9. 6-Month AI Application Engineer Roadmap</h2>
-    <p><strong>Month 1–2 — Foundations &amp; proof of API skill</strong></p>
+    <p><strong>Month 1–2 — Strengthen proof</strong></p>
     <ul>
-      <li>Build a small backend service that calls OpenAI or Anthropic APIs with structured outputs and tool/function calling.</li>
-      <li>Document architecture and prompts in a public GitHub repo README.</li>
-      <li>Fill GMG CV placeholders with real products, technologies, and [ADD METRIC] where true.</li>
+      <li>Polish PDF Analyzer README / case study (architecture, prompts, limitations, screenshots).</li>
+      <li>Confirm and add any real GMG metrics (releases, performance, scale) where true.</li>
     </ul>
-    <p><strong>Month 3–4 — RAG &amp; product shape</strong></p>
+    <p><strong>Month 3–4 — Agents &amp; second GenAI project</strong></p>
     <ul>
-      <li>Ship a personal RAG app (document upload → embeddings → vector search → grounded answers).</li>
-      <li>Optionally add a thin iOS or Flutter client to show mobile + AI integration.</li>
+      <li>Add an agentic workflow (tool use / MCP) for a practical task.</li>
       <li>Label clearly as Personal Project on CV and LinkedIn.</li>
     </ul>
-    <p><strong>Month 5–6 — Agents &amp; positioning upgrade</strong></p>
+    <p><strong>Month 5–6 — Positioning upgrade</strong></p>
     <ul>
-      <li>Add an agentic workflow (tool use / MCP) for a practical task (e.g., support triage, content Q&amp;A, or internal ops helper).</li>
-      <li>Publish a short case study: problem, architecture, stack, limitations, demo link.</li>
-      <li>Update headline to lead with Senior iOS still, but strengthen AI Application Engineer with two concrete projects; begin selective applications to Mobile + AI / AI Application roles.</li>
+      <li>Publish a short case study with demo link.</li>
+      <li>Keep Senior iOS as primary title; strengthen AI Application Engineer with two concrete projects; begin selective Mobile + AI applications.</li>
     </ul>
 
     <h2>10. ATS Readiness Score</h2>
-    <p class="score">72 / 100</p>
+    <p class="score">86 / 100</p>
     <p>
-      Strong mobile keyword coverage, clear seniority signal via GMG title, one strong production metric (crash-free rate), honest AI section. Score held back by GMG placeholders, missing LinkedIn/GitHub, thin project attribution for some apps, and no GenAI portfolio proof yet.
+      Strong mobile keyword coverage, clear seniority via GMG title, concrete GMG app list with App Store links, Swan crash-free metric, LinkedIn/GitHub/portfolio URLs, and a labeled personal GenAI/RAG project. Remaining gaps: deeper GMG impact metrics and automated testing / CI keywords when confirmed.
     </p>
 
-    <h2>11. Five Improvements That Would Strengthen This CV Significantly</h2>
+    <h2>11. Five Improvements That Would Strengthen This CV Further</h2>
     <ol>
-      <li>Replace all GMG <span class="placeholder">[PLACEHOLDER]</span> bullets with concrete products, features, stack, and outcomes.</li>
-      <li>Add LinkedIn and GitHub / portfolio URLs.</li>
-      <li>Confirm employer attribution for Emirates India Int’l Exchange and Wathiq Rewards; add 1–2 technical bullets each.</li>
-      <li>Add 1–2 clearly labeled personal GenAI projects (RAG + LLM API or agent demo)—still without claiming production AI.</li>
-      <li>Confirm and then add modern stack keywords you truly use (SwiftUI, APNs, CI/CD, tests) plus any real [ADD METRIC] values for performance, releases, or scale.</li>
+      <li>Add 1–2 quantified GMG outcomes (release cadence, performance, user scale) where true.</li>
+      <li>Confirm employer attribution and technical bullets for Emirates India Int’l Exchange and Wathiq Rewards.</li>
+      <li>Publish a short public case study / demo for PDF Analyzer.</li>
+      <li>Confirm and then add modern stack keywords you truly use (APNs, CI/CD, tests).</li>
+      <li>Add a second personal GenAI project (agents / MCP) before leading applications with AI Application Engineer as primary title.</li>
     </ol>
   </div>
 
